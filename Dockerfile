@@ -1,4 +1,4 @@
-FROM apline:latest
+FROM alpine:3.14
 WORKDIR /usr/local/app
 RUN git clone --depth 1 https://github.com/bol-van/zapret .
 RUN install_bin.sh
