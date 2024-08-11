@@ -1,5 +1,8 @@
-FROM alpine:3.14
+FROM debian:latest
 
-RUN /opt/zapret/init.d/sysv/zapret start
+WORKDIR /opt/zapret
+RUN git clone --depth 1 https://github.com/bol-van/zapret .
+RUN ./install_bin.sh
+RUN ./install_prereq.sh
 ENTRYPOINT ["tail", "-f", "/dev/null"]
 CMD ["-f","/dev/null"]
