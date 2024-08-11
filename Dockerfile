@@ -1,5 +1,5 @@
 FROM debian:latest
-RUN apt-get -y install --no-install-recommends git
+RUN apk add git
 
 WORKDIR /opt/zapret
 RUN git clone --depth 1 https://github.com/bol-van/zapret .
