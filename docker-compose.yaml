@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  zapret:
+    container_name: zapret
+    build: https://github.com/meephly/zapret-dockerfile.git
+    volumes:
+      - zapretConfig:/opt/zapret
+    ports:
+      - 988
+
+volumes:
+  zapretConfig:
+networks:
+  bridge:
+    external: true
