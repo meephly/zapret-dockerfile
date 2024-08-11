@@ -1,5 +1,5 @@
-FROM debian:latest
-RUN apk add git
+FROM debian:12.6
+RUN apt-get update && apt-get install -y git
 
 WORKDIR /opt/zapret
 RUN git clone --depth 1 https://github.com/bol-van/zapret .
